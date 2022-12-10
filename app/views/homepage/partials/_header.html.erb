@@ -1,0 +1,92 @@
+
+<header class="site-header">
+  <nav class="navbar navbar-expand-lg bg-transparent-light static-nav">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img src="images/logo-dark.png" alt="logo" />
+      </a>
+      <% if current_page?(root_url) %>
+        <button class="navbar-toggler navbar-toggler-right collapsed d-none" type="button" data-toggle="collapse" data-target="#xenav">
+          <span> </span>
+          <span> </span>
+          <span> </span>
+        </button>
+        <div class="collapse navbar-collapse" id="xenav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link pagescroll" href="#home">Początek</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pagescroll" href="#our-feature">O nas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pagescroll" href="#our-portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pagescroll" href="#our-process">Wycena</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pagescroll" href="#contactus">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+      <% else %>
+        <div class="collapse navbar-collapse" id="xenav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">< Powrót</a>
+            </li>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+    <% if current_page?(root_url) %>
+      <a href="javascript:void(0)" class="d-lg-inline-block sidemenu_btn" id="sidemenu_toggle">
+        <span></span> <span></span> <span></span>
+      </a>
+    <% end %>
+  </nav>
+
+  <div class="side-menu">
+    <div class="inner-wrapper">
+      <span class="btn-close" id="btn_sideNavClose"><i></i><i></i></span>
+      <nav class="side-nav">
+        <ul class="navbar-nav w-100">
+          <li class="nav-item active">
+            <a class="nav-link pagescroll" href="#home">Początek</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pagescroll" href="#our-feature">O nas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pagescroll" href="#our-portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pagescroll" href="#our-process">Wycena</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pagescroll" href="#contactus">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="side-footer w-100">
+        <ul class="social-icons-simple white top40">
+          <li>
+            <a href="https://www.facebook.com/3d-mkubekpl-110073513835551"><i class="fa fa-facebook"></i> </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/3d_mkubek_pl/">
+              <i class="fa fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:kontakt@3d-mkubek.pl"><i class="fa fa-envelope-o"></i> </a>
+          </li>
+        </ul>
+        <p class="whitecolor">&copy; 2019 3d-mkubek.pl</p>
+      </div>
+    </div>
+  </div>
+  <a id="close_side_menu" href="javascript:void(0);"></a>
+</header>

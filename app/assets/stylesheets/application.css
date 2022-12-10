@@ -1,0 +1,68 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.img-shadow {
+  box-shadow: 0px 0px 50px #202231;
+}
+
+#madeline-holder {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.icon-mad-screen-full,
+.icon-mad-capture {
+  display: none;
+}
+
+#submit_btn {
+  color: #fff;
+}
+
+.input-hidden {
+  display: none;
+}
+
+#order-info textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+#process-info-loading {
+  display: none;
+}
+
+.link-hover:hover {
+  color: #00bcd4;
+}
+
+.policy-list {
+  list-style: decimal;
+  margin-left: 20px;
+}
+
+.consent-copy {
+  text-align: left;
+  font-size: 14px;
+}
+
+.policy-link:hover {
+  color: #00bcd4;
+}
+
+.input-policy {
+  margin-right: 8px;
+}

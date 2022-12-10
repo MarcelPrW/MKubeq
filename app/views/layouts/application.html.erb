@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>3D-mkubek.pl - mkubekowanie przestrzenne</title>
+    <meta name="description" content="Wymkubeki 3D - Darmowa natychmiastowa wycena, szybka wysyłka. Zamów swój trójwymiarowy wymkubek w 3d-mkubek." />
+    <meta name="keywords" content="mkubek 3D,3D,mkubek,mkubekowanie przestrzenne, Projektowanie 3D, FDM">
+    <link href="images/favicon.png" rel="icon" />
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag("application") %>
+
+    <!-- Static template javascripts -->
+    <script src="/vendor/javascript/jquery-3.1.1.min.js"></script>
+    <script src="/vendor/javascript/popper.min.js"></script>
+    <script src="/vendor/javascript/bootstrap.min.js"></script>
+    <script src="/vendor/javascript/jquery.appear.js"></script>
+    <script src="/vendor/javascript/jquery.matchHeight-min.js"></script>
+    <script src="/vendor/javascript/owl.carousel.min.js"></script>
+    <script src="/vendor/javascript/jquery-countTo.js"></script>
+    <script src="/vendor/javascript/parallaxie.js"></script>
+    <script src="/vendor/javascript/jquery.cubeportfolio.min.js"></script>
+    <script src="/vendor/javascript/jquery.fancybox.min.js"></script>
+    <script src="/vendor/javascript/jquery.background-video.js"></script>
+    <script src="/vendor/javascript/typewriter.js"></script>
+    <script src="/vendor/javascript/particles.min.js"></script>
+    <script src="/vendor/javascript/wow.min.js"></script>
+    <script src="/vendor/javascript/revolution/jquery.themepunch.tools.min.js"></script>
+    <script src="/vendor/javascript/revolution/jquery.themepunch.revolution.min.js"></script>
+    <script src="/vendor/javascript/revolution/extensions/revolution.extension.actions.min.js"></script>
+    <script src="/vendor/javascript/revolution/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="/vendor/javascript/revolution/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="/vendor/javascript/revolution/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="/vendor/javascript/revolution/extensions/revolution.extension.migration.min.js"></script>
+    <script src="/vendor/javascript/revolution/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="/vendor/javascript/revolution/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="/vendor/javascript/revolution/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="/vendor/javascript/revolution/extensions/revolution.extension.video.min.js"></script>
+    <script src="/vendor/javascript/functions.js"></script>
+    <script src="/vendor/javascript/jquery.form.min.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154995241-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-154995241-1');
+    </script>
+
+    <!-- Static template styles -->
+    <link rel="stylesheet" href="/vendor/styles/plugins.css" />
+    <link rel="stylesheet" href="/vendor/styles/style.css" />
+
+    <%= javascript_pack_tag 'application' %>
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="90">
+    <% if user_signed_in? %>
+      Logged in as <strong><%= current_user.email %></strong>.
+      <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+      <div class="admin">
+        <%= render "admin/partials/orders" %>
+        <br/>
+        <%= render "admin/partials/contact" %>
+      </div>
+    <% else %>
+      <%= yield %>
+    <% end %>
+  </body>
+</html>

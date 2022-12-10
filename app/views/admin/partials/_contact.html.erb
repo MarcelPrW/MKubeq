@@ -1,0 +1,23 @@
+<h1>Kontakt</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Info</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% Order.where(:filename => nil).each do |order| %>
+    <tr>
+      <td><%= order.name %></td>
+      <td><%= order.surname %></td>
+      <td><%= order.phone %></td>
+      <td><%= order.email %></td>
+      <td><%= order.info %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

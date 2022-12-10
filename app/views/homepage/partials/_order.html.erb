@@ -1,0 +1,120 @@
+<link href="/vendor/styles/Madeleine.css" rel="stylesheet">
+<script src="/vendor/javascript/madeline/stats.js"></script>
+<script src="/vendor/javascript/madeline/detector.js"></script>
+<script src="/vendor/javascript/madeline/three.min.js"></script>
+<script src="/vendor/javascript/Madeleine.js"></script>
+
+<section id="our-feature" class="padding single-feature">
+  <div class="container">
+    <div class="row">
+      <div id="order-info" class="col-md-6 col-sm-7 text-md-left text-center wow fadeInLeft" data-wow-delay="300ms">
+        <div class="heading-title heading_space">
+          <span>Zamówienie</span>
+          <h2 class="darkcolor bottom30">Szczegóły zamówienia</h2>
+        </div>
+        <form class="getin_form wow fadeInUp" data-wow-delay="400ms" id="order-info-form">
+          <div class="row">
+            <div class="col-sm-12" id="result"></div>
+            <div class="col-md-6 col-sm-6">
+              <div class="form-group bottom35">
+                <input class="form-control" type="text" placeholder="Imię:" required id="first_name" name="name" required/>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="form-group bottom35">
+                <input class="form-control" type="text" placeholder="Nazwisko:" required id="last_name" name="surname" required/>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="form-group bottom35">
+                <input class="form-control" type="email" placeholder="Email:" required id="email" name="email" required/>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="form-group bottom35">
+                <input class="form-control" type="tel" placeholder="Telefon:" id="phone" name="phone" required/>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12">
+              <div class="form-group bottom35">
+                <textarea class="form-control" placeholder="Adres do wysyłki" id="address" name="address" required></textarea>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12">
+              <div class="form-group bottom35">
+                <textarea class="form-control" placeholder="Dodatkowe uwagi" id="info" name="info"></textarea>
+              </div>
+            </div>
+            
+            <input name="calculation" type="text" class="input-hidden">
+            <input name="filename" type="text" class="input-hidden">
+            <input name="color" type="text" class="input-hidden">
+            <input name="quality" type="text" class="input-hidden">
+            
+            <div class="col-sm-12 bottom35 consent-copy">
+            <input class="input-policy" type="checkbox" name="consent_copy" required>Oświadczam, że zapoznałem/łam się z
+              <a class="policy-link" href="/policy">Regulaminem</a> i akceptuję jego treść.</input>
+            </div>
+            <div class="col-sm-12">
+              <button type="submit" class="button btnprimary" id="submit_btn">
+                Zamawiam
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div id="order-info-done" class="col-md-6 col-sm-7 text-md-left text-center wow fadeInLeft" data-wow-delay="300ms">
+        <div class="heading-title heading_space">
+          <span>Podsumowanie</span>
+          <h2 class="darkcolor bottom30">Gotowe</h2>
+        </div>
+        <p class="bottom35">
+          Zamówienie zostało złożone. W celu potwierdzenia zamówienia skontaktujemy się najszybciej jak to możliwe. Po wymkubekowaniu wymkubek zostanie wysłany za pobraniem.
+        </p>
+        <a href="/" class="button btnprimary">
+          Dalej
+        </a>
+      </div>
+      <div id="order-info-loading" class="col-md-6 col-sm-7 text-md-left text-center wow fadeInLeft" data-wow-delay="300ms">
+        <div class="heading-title heading_space">
+          <span>Zamówienie</span>
+          <h2 class="darkcolor bottom30">Przetwarzanie zamówienia</h2>
+        </div>
+        <div class="form-loader-holder">
+          <div class="sk-cube-grid">
+            <div class="sk-cube sk-cube1"></div>
+            <div class="sk-cube sk-cube2"></div>
+            <div class="sk-cube sk-cube3"></div>
+            <div class="sk-cube sk-cube4"></div>
+            <div class="sk-cube sk-cube5"></div>
+            <div class="sk-cube sk-cube6"></div>
+            <div class="sk-cube sk-cube7"></div>
+            <div class="sk-cube sk-cube8"></div>
+            <div class="sk-cube sk-cube9"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-5 wow fadeInRight" data-wow-delay="350ms">
+        <div id="madeline-holder" class="image top50">
+          <div id="target" class="madeleine"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  $(document).on('turbolinks:load', function() {
+    setTimeout(() => {
+      var madeleine = new Madeleine({
+          target: 'target',
+          data: 'uploads/' + $("#madeline-holder").attr("file-name"),
+          path: '/',
+          viewer: {
+            width: $("#order-info").width() - 50,
+            height:  $("#order-info").height() - 50
+          }
+        });
+    }, 1000);
+  });
+</script>

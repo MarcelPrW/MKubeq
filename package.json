@@ -1,0 +1,23 @@
+{
+  "name": "mkubek",
+  "private": true,
+  "dependencies": {
+    "@rails/actioncable": "^6.0.0",
+    "@rails/activestorage": "^6.0.0",
+    "@rails/ujs": "^6.0.0",
+    "@rails/webpacker": "4.2.2",
+    "jquery": "^3.4.1",
+    "turbolinks": "^5.2.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.6",
+    "node-stl": "^0.7.0"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "webpack-dev-server": "^3.10.1"
+  },
+  "resolutions": {
+    "**/**/fsevents": "^1.2.9"
+  }
+}

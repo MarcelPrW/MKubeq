@@ -1,0 +1,93 @@
+<section id="our-process" class="padding bglight">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 text-center">
+        <div class="heading-title wow fadeInUp" data-wow-delay="300ms">
+          <span>Zamówienie krok po kroku</span>
+          <h2 class="darkcolor bottom20">Dokonaj darmowej wyceny</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="row our-process">
+      <div id="step-1" class="col-lg-3 col-md-2">
+        <div class="process-number top60 wow fadeInUp" data-wow-delay="350ms">
+          <span class="pro-step">1</span>
+          <div class="process-info-conatiner">
+          <h4 class="font-light darkcolor top20 bottom20">Dodaj model</h4>
+          <p>Wybierz model w formacie stl ze swojego dysku</p>
+          <form method="post" enctype="multipart/form-data" class="form-upload-model">
+            <input type="file" name="model" id="fileToUpload" accept=".stl"/>
+          </form>
+          <button disabled type="submit" class="button btnprimary" id="submit_btn">
+            Wybierz plik
+          </button>
+          </div>
+          <div id="process-info-loading" class="text-md-left text-center">
+            <div class="form-loader-holder">
+              <div class="sk-cube-grid top20 bottom10">
+                <div class="sk-cube sk-cube1"></div>
+                <div class="sk-cube sk-cube2"></div>
+                <div class="sk-cube sk-cube3"></div>
+                <div class="sk-cube sk-cube4"></div>
+                <div class="sk-cube sk-cube5"></div>
+                <div class="sk-cube sk-cube6"></div>
+                <div class="sk-cube sk-cube7"></div>
+                <div class="sk-cube sk-cube8"></div>
+                <div class="sk-cube sk-cube9"></div>
+              </div>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="bar"></div>
+            <div class="percent">0%</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="step-2" class="col-lg-3 col-md-2 disabled-step">
+        <div class="process-number top60 even wow fadeInUp" data-wow-delay="400ms">
+          <span class="pro-step">2</span>
+          <h4 class="font-light darkcolor top20 bottom20">
+            Grubość warstwy
+          </h4>
+          <p>Cieńsza warstwa oznacza większą dokładność</p>
+          <select id="model-quality">
+            <option disabled selected value> -- Jakość wymkubeku -- </option>
+            <option value="0">Bardzo dobra</option>
+            <option value="1">Dobra</option>
+            <option value="2">Podstawowa</option>
+          </select>
+          <select id="model-color">
+            <option disabled selected value> -- Kolor wymkubeku -- </option>
+            <option value="black">Czarny</option>
+            <option value="white">Biały</option>
+            <option value="other">Inny</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="step-3" class="col-lg-3 col-md-2 disabled-step">
+        <div class="process-number top60 wow fadeInUp" data-wow-delay="450ms">
+          <span class="pro-step">3</span>
+          <h4 class="font-light darkcolor top20 bottom20">Podsumowanie</h4>
+          <p id="calculated-price">Cena: <b> - </b></p>
+          <p id="calculated-time">Przybliony czas wysyłki: <b> - </b></p>
+        </div>
+      </div>
+
+      <div id="step-4" class="col-lg-3 col-md-2 disabled-step">
+        <div class="process-number top60 even wow fadeInUp" data-wow-delay="500ms">
+          <span class="pro-step">4</span>
+          <h4 class="font-light darkcolor top20 bottom20">Zamawiam</h4>
+          <p>
+            Naciśnij kup teraz aby przejść dalej
+          </p>
+          <a href="#" disabled class="button btnprimary" id="submit_checkout_btn">
+            Kup teraz
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,33 @@
+<h1>Zamówienia</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>Address</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Filename</th>
+      <th>Info</th>
+      <th>Color</th>
+      <th>Quality</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% Order.where.not(:filename => nil).each do |order| %>
+    <tr>
+      <td><%= order.name %></td>
+      <td><%= order.surname %></td>
+      <td><%= order.address %></td>
+      <td><%= order.phone %></td>
+      <td><%= order.email %></td>
+      <td><a href="/uploads/<%= order.filename %>" download><%= order.filename %></a></td>
+      <td><%= order.info %></td>
+      <td><%= order.color %></td>
+      <td><%= order.quality %></td>
+      <td><%= order.calculation %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

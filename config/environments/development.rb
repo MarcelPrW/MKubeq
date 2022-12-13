@@ -29,7 +29,7 @@ Rails.application.configure do
   end
 
   config.action_mailer.delivery_method = :smtp
-  host = '3d-mkubek.pl'
+  host = 'mkubek.pl'
   config.action_mailer.default_url_options = { host: host }
 
   config.action_mailer.smtp_settings = {
